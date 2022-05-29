@@ -13,7 +13,28 @@ Here is a compilation of data science work I have written in Python and worked o
 ## Programs
 
 ### [YouTube API to Database Automated Pipeline](https://github.com/Dince-afk/Data_Science/blob/main/1.%20Projects%20and%20Showcases/youtube_api_db.ipynb)
-<img width="872" alt="preview" src="https://user-images.githubusercontent.com/68876259/170860704-d696ca2d-1d5a-497e-92a1-ee84150e34ba.png">
-- Downloading and processing data from the YouTube API and downloading it to a database.
+
+```python
+API_KEY = "ENTER"
+CHANNEL_ID = "ENTER"
+
+df = pd.DataFrame(columns=["video_id","video_title","upload_date","view_count","like_count","favorite_count","comment_count"]) # Create empty df for later appending
+
+df = get_videos(df) # Function fetching data and returning df
+
+host = "ENTER"
+user = "ENTER"
+password = "ENTER"
+database = "ENTER"
+mydb = connect_to_db(host, user, password) # Connect to database
+mycursor = mydb.cursor() # Create cursor navigator
+
+create_table(mycursor) # Create "videos" table if not yet existing
+new_vid_df = update_db(mycursor, df) # Update existing rows and return new rows as df
+append_from_df_to_db(mycursor, new_vid_df) # Appending new rows to table
+mydb.commit() # Committing all changes
+```
+
+- Downloading and processing data from the YouTube API and uploading it to a database.
 - Tools: `requests`, `pandas`, `time`, `mysql`
 
