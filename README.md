@@ -47,7 +47,7 @@ append_from_df_to_db(mycursor, new_vid_df)
 mydb.commit() 
 ```
 
-### [Fetch County Value for Longitude/Latitude with OpenStreetMap API](https://github.com/Dince-afk/Data_Science/blob/main/1.%20Projects%20and%20Showcases/youtube_api_db.ipynb)
+### [Fetch County Value for Longitude/Latitude with OpenStreetMap API](https://github.com/Dince-afk/Data-Science-Python/blob/main/1.%20Projects%20and%20Showcases/get_county.ipynb)
 
 - This program allows you to get the county (or else state, country, country code) for any given longitude and latitude values. Works on big dataframes. In my case I've had 17,000 rows and it took me around two hours for completion.
 - Tools: `requests`, `pandas`, `time`, `mysql`, `json`, `functools`, `tqdm`, `missingno`
