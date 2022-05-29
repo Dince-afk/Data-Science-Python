@@ -12,7 +12,7 @@ Here is a compilation of data science work I have written in Python and worked o
 
 ## Programs
 
-### [YouTube API to Database Automated Pipeline](https://github.com/Dince-afk/Data_Science/blob/main/1.%20Projects%20and%20Showcases/youtube_api_db.ipynb)
+### [YouTube API to Database Automated Pipeline]([https://github.com/Dince-afk/Data_Science/blob/main/1.%20Projects%20and%20Showcases/youtube_api_db.ipynb](https://github.com/Dince-afk/Data-Science-Python/blob/main/1.%20Projects%20and%20Showcases/youtube_api_db.ipynb))
 
 - Downloading and processing data from the YouTube API and uploading it to a database.
 - Tools: `requests`, `pandas`, `time`, `mysql`
