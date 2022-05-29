@@ -1,6 +1,6 @@
 # Data Science in Python
 
-Here is a compilation of data science work I have written in Python and worked over the years on.
+Here is a compilation of data science work I have written in Python and worked over the years on. Please feel free to use, share and add to any tools.  
 
 ## Projects
 
@@ -10,7 +10,7 @@ Here is a compilation of data science work I have written in Python and worked o
 - Questions: How did climate change related topics change over time? How do views and likes for different topics differ? 
 - Tools: `NumPy`, `Pandas`, `re`, `Matplotlib`
 
-## Programs
+## Tools
 
 ### [YouTube API to Database Automated Pipeline](https://github.com/Dince-afk/Data_Science/blob/main/1.%20Projects%20and%20Showcases/youtube_api_db.ipynb)
 
@@ -47,3 +47,28 @@ append_from_df_to_db(mycursor, new_vid_df)
 mydb.commit() 
 ```
 
+### [Fetch County Value for Longitude/Latitude with OpenStreetMap API](https://github.com/Dince-afk/Data_Science/blob/main/1.%20Projects%20and%20Showcases/youtube_api_db.ipynb)
+
+- This program allows you to get the county (or else state, country, country code) for any given longitude and latitude values. Works on big dataframes. In my case I've had 17,000 rows and it took me around two hours for completion.
+- Tools: `requests`, `pandas`, `time`, `mysql`, `json`, `functools`, `tqdm`, `missingno`
+
+```python
+# Caching, i.e. using past request results with the same lat and long values, is required by API provider
+@cache 
+def bar(lat, long):
+    url = "https://nominatim.openstreetmap.org/reverse?format=geojson&lat=" +str(lat)+"&lon="+str(long)
+    try:
+        response = requests.get(url).json()
+        response = response["features"][0]["properties"]
+        county = response["address"]["county"]
+        return county
+    except:
+        return None # In case the API call returns an error -> return None
+
+def foo(row):
+    return bar(row["latitude"], row["longitude"])
+    
+# Provide progress overview
+tqdm.pandas() 
+df["county"] = df.progress_apply(foo, axis=1)
+```
