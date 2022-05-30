@@ -52,7 +52,7 @@ mydb.commit()
 
 ---
 
-## [Get Twitter Data with Help from Tweepy and Pandas](https://github.com/Dince-afk/Data-Science-Python/blob/main/1.%20Projects%20and%20Showcases/youtube_api_db.ipynb)
+## [Get Twitter Data with Help from Tweepy and Pandas](https://github.com/Dince-afk/Data-Science-Python/blob/main/1.%20Projects%20and%20Showcases/tweepy_pandas_data.ipynb)
 
 - This program allows you to get data from recent tweets, transform it into a nice pandas DataFrame and write it to your hard drive.
 - Tools: `requests`, `json`, `pandas`, `tweepy` 
