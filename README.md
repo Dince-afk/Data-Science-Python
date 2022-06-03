@@ -4,11 +4,22 @@ Here is a compilation of data science work I have written in Python and worked o
 
 # Projects
 
+
+## [Machine Learning - Jupyter Notebook Template]()
+- I love keeping my jupyter notebook files clean and consistent. I therefore use custom templates for various tasks. Here is my template for machine learning projects.
+- Notebook includes: 
+    - importing libraries and data
+    - exploring the dataset: data types, missing values, metrics, visualizations.
+    - preprocessing: dropping columns, imputing missing values, encoding categorical values, feature scaling.
+    - splitting train and test data
+- Packages: `NumPy`, `Pandas`, `Matplotlib`, `sklearn`
+
+
 ## [TED Talks and Climate Change](https://github.com/Dince-afk/Data_Science/blob/main/1.%20Projects%20and%20Showcases/ted_talks_climate.ipynb)
 ![Download](https://user-images.githubusercontent.com/68876259/170859279-77ae3739-f236-4454-9539-49471065865a.png)
 - In this notebook I have analyzed TED talks that are related to climate change and environmental issues. 
 - Questions: How did climate change related topics change over time? How do views and likes for different topics differ? 
-- Tools: `NumPy`, `Pandas`, `re`, `Matplotlib`
+- Packages: `NumPy`, `Pandas`, `re`, `Matplotlib`
 
 ---
 
@@ -18,7 +29,7 @@ Here is a compilation of data science work I have written in Python and worked o
 ## [YouTube API to Database Automated Pipeline](https://github.com/Dince-afk/Data-Science-Python/blob/main/1.%20Projects%20and%20Showcases/youtube_api_db.ipynb)
 
 - Downloading and processing data from the YouTube API and uploading it to a database.
-- Tools: `requests`, `pandas`, `time`, `mysql`
+- Packages: `requests`, `pandas`, `time`, `mysql`
 
 ```python
 API_KEY = "ENTER"
@@ -55,7 +66,7 @@ mydb.commit()
 ## [Get Twitter Data with Help from Tweepy and Pandas](https://github.com/Dince-afk/Data-Science-Python/blob/main/1.%20Projects%20and%20Showcases/tweepy_pandas_data.ipynb)
 
 - This program allows you to get data from recent tweets, transform it into a nice pandas DataFrame and write it to your hard drive.
-- Tools: `requests`, `json`, `pandas`, `tweepy` 
+- Packages: `requests`, `json`, `pandas`, `tweepy` 
 
 **Results in:**
 ```
@@ -86,7 +97,7 @@ memory usage: 3.0+ KB
 ## [Fetch County Value for Longitude/Latitude with OpenStreetMap API](https://github.com/Dince-afk/Data-Science-Python/blob/main/1.%20Projects%20and%20Showcases/get_county.ipynb)
 
 - This program allows you to get the county (or else state, country, country code) for any given longitude and latitude values. Works on big dataframes. In my case I've had 17,000 rows and it took me around two hours for completion.
-- Tools: `requests`, `pandas`, `time`, `mysql`, `json`, `functools`, `tqdm`, `missingno`
+- Packages: `requests`, `pandas`, `time`, `mysql`, `json`, `functools`, `tqdm`, `missingno`
 
 ```python
 # Caching, i.e. using past request results with the same lat and long values, is required by API provider
